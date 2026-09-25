@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thirty Years in Their Words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+:root {
+  --bg: #f3f5f2;
+  --surface: #ffffff;
+  --ink: #141714;
+  --ink-2: #394039;
+  --muted: #667067;
+  --rule: #dce1db;
+  --rule-strong: #bfc8be;
+  --accent: #589a61;
+  --accent-ink: #3d7345;
+  --accent-tint: #e8f2e9;
+  --cover: #0e100e;
+  --cover-ink: #ffffff;
+  --cover-muted: #aeb8af;
+  --yours-bg: #fbefd2;
+  --yours-ink: #6f4700;
+  --partly-bg: #e9ece7;
+  --partly-ink: #485049;
+  --sans: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0d0f0d;
+    --surface: #151915;
+    --ink: #e7ebe6;
+    --ink-2: #c3cac3;
+    --muted: #8f998f;
+    --rule: #263026;
+    --rule-strong: #364036;
+    --accent: #6fb178;
+    --accent-ink: #93cf9b;
+    --accent-tint: #172418;
+    --cover: #050605;
+    --cover-ink: #ffffff;
+    --cover-muted: #97a398;
+    --yours-bg: #33270b;
+    --yours-ink: #f0c665;
+    --partly-bg: #1f241f;
+    --partly-ink: #b9c1b9;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0d0f0d;
+  --surface: #151915;
+  --ink: #e7ebe6;
+  --ink-2: #c3cac3;
+  --muted: #8f998f;
+  --rule: #263026;
+  --rule-strong: #364036;
+  --accent: #6fb178;
+  --accent-ink: #93cf9b;
+  --accent-tint: #172418;
+  --cover: #050605;
+  --cover-ink: #ffffff;
+  --cover-muted: #97a398;
+  --yours-bg: #33270b;
+  --yours-ink: #f0c665;
+  --partly-bg: #1f241f;
+  --partly-ink: #b9c1b9;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 800px; margin-inline: auto; padding-inline: 20px; }
+p { margin: 0 0 12px; }
+em, i { font-style: italic; }
+
+/* ---------- cover ---------- */
+header.cover {
+  background: var(--cover);
+  color: var(--cover-ink);
+  padding-block: 56px 40px;
+  border-bottom: 6px solid var(--accent);
+}
+.eyebrow {
+  font: 700 12px/1.4 var(--sans);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0;
+}
+h1 {
+  font: 900 clamp(2.15rem, 7.2vw, 3.8rem)/0.98 var(--sans);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin: 14px 0 20px;
+  text-wrap: balance;
+}
+.cover .lede { font-size: 1.14rem; line-height: 1.55; color: var(--cover-muted); max-width: 36em; margin: 0; }
+.cover .lede strong { color: var(--cover-ink); font-weight: 600; }
+.facts {
+  display: flex; flex-wrap: wrap; gap: 14px 34px;
+  margin: 30px 0 0; padding: 0; list-style: none;
+  font: 600 11.5px/1.3 var(--sans); letter-spacing: .1em; text-transform: uppercase;
+  color: var(--cover-muted);
+}
+.facts b {
+  display: block; color: var(--cover-ink);
+  font-weight: 800; font-size: 24px; letter-spacing: 0;
+  font-variant-numeric: tabular-nums; margin-bottom: 2px;
+}
+
+/* ---------- sections ---------- */
+section { padding-block: 46px 6px; }
+h2 {
+  font: 900 1.5rem/1.15 var(--sans);
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  margin: 0 0 8px;
+  text-wrap: balance;
+}
+.section-lede { color: var(--ink-2); margin: 0 0 22px; max-width: 64ch; }
+.intro p { max-width: 64ch; }
+.intro p:first-child::first-line { font-weight: 600; }
+
+/* ---------- the story so far ---------- */
+.timeline { border-top: 2px solid var(--ink); }
+.t-row {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  column-gap: 18px;
+  row-gap: 2px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
+}
+.t-when { font: 800 14px/1.35 var(--sans); font-variant-numeric: tabular-nums; grid-column: 1; grid-row: 1 / span 2; }
+.t-what { grid-column: 2; line-height: 1.45; }
+.t-who { grid-column: 2; font: 600 12.5px/1.4 var(--sans); color: var(--muted); }
+.chip {
+  grid-column: 3; grid-row: 1;
+  font: 700 10.5px/1 var(--sans); letter-spacing: .09em; text-transform: uppercase;
+  padding: 5px 9px; border-radius: 50px; white-space: nowrap;
+}
+.chip.film { background: var(--accent-tint); color: var(--accent-ink); }
+.chip.partly { background: var(--partly-bg); color: var(--partly-ink); }
+.chip.yours { background: var(--yours-bg); color: var(--yours-ink); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 0 0 14px; font: 600 12.5px var(--sans); color: var(--muted); align-items: center; }
+.legend .chip { grid-column: auto; grid-row: auto; }
+.legend .lg { display: inline-flex; align-items: center; gap: 8px; }
+
+/* ---------- only you ---------- */
+.picks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.pick {
+  display: grid; grid-template-columns: 24px 1fr; column-gap: 14px; align-items: start;
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 4px;
+  padding: 14px 16px;
+}
+.pick input { width: 19px; height: 19px; margin: 3px 0 0; accent-color: var(--accent); cursor: pointer; }
+.pick input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.pick label { cursor: pointer; display: block; }
+.p-title { font: 800 15px/1.35 var(--sans); display: block; margin-bottom: 3px; }
+.p-why { display: block; color: var(--ink-2); font-size: 16px; line-height: 1.5; }
+.p-who { display: block; font: 600 12px/1.4 var(--sans); color: var(--muted); margin-top: 5px; }
+.pick:has(input:checked) { border-color: var(--accent); background: var(--accent-tint); }
+
+/* ---------- movements + people ---------- */
+.movement { padding-block: 46px 0; }
+.movement-head {
+  display: grid; grid-template-columns: auto 1fr; column-gap: 16px; align-items: baseline;
+  border-top: 2px solid var(--ink); padding-top: 14px;
+}
+.numeral { font: 900 2.3rem/1 var(--sans); color: var(--accent); font-variant-numeric: lining-nums; }
+.movement-head h2 { margin: 0; }
+.movement-head .years { grid-column: 2; font: 700 11.5px/1.4 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+.movement > p { margin: 14px 0 0; color: var(--ink-2); max-width: 64ch; }
+
+article.person {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 22px 24px 14px;
+  margin-top: 18px;
+}
+.person h3 { font: 800 1.3rem/1.2 var(--sans); margin: 0; letter-spacing: -0.005em; text-wrap: balance; }
+.person .role { font: 600 12.5px/1.45 var(--sans); color: var(--muted); margin: 5px 0 0; }
+.person h4 {
+  font: 800 11px/1.3 var(--sans); letter-spacing: .16em; text-transform: uppercase;
+  color: var(--accent-ink); margin: 20px 0 8px;
+}
+.person ul { margin: 0 0 6px; padding-left: 1.15em; }
+.person li { margin: 3px 0; }
+.stories p { margin: 0 0 10px; }
+.stories b { font-family: var(--sans); font-weight: 700; font-size: .9em; }
+.meets { margin: 0 0 6px; padding: 0; list-style: none; }
+.meets li { position: relative; padding-left: 24px; margin: 6px 0; }
+.meets li::before { content: "\2192"; position: absolute; left: 0; top: 0; color: var(--accent); font-family: var(--sans); font-weight: 700; }
+.closer { color: var(--ink-2); font-style: italic; border-top: 1px solid var(--rule); padding-top: 10px; margin: 14px 0 6px; font-size: 16px; }
+
+/* ---------- dates to confirm ---------- */
+.confirm-list { margin: 0; padding-left: 1.2em; max-width: 66ch; }
+.confirm-list li { margin: 7px 0; }
+
+/* ---------- footer ---------- */
+footer.end { padding-block: 44px 60px; }
+footer.end p { font: 500 13px/1.6 var(--sans); color: var(--muted); max-width: 70ch; }
+
+@media (max-width: 560px) {
+  body { font-size: 16.5px; }
+  header.cover { padding-block: 40px 30px; }
+  .t-row { grid-template-columns: 1fr auto; }
+  .t-when { grid-column: 1; grid-row: 1; }
+  .chip { grid-column: 2; grid-row: 1; }
+  .t-what, .t-who { grid-column: 1 / -1; }
+  article.person { padding: 18px 16px 10px; }
+}
+
+@media print {
+  @page { size: letter; margin: 0.55in 0.6in; }
+  html { zoom: .75; }
+  body { background: #fff; }
+  header.cover, .chip, .pick, article.person { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .pick, .t-row, .person li, .confirm-list li { break-inside: avoid; }
+  article.person { break-inside: auto; }
+  .person h3, .person .role, .person h4, .movement-head, h2 { break-after: avoid; }
+  .movement, #confirm { break-before: page; }
+  footer.end { padding-block: 24px 0; break-inside: avoid; }
+}
+
+</style>
+</head>
+<body>
+<header class="cover">
+  <div class="wrap">
+    <p class="eyebrow">The Life Church &middot; 30th Anniversary Documentary</p>
+    <h1>Thirty Years in Their Words</h1>
+    <p class="lede">Prepared for <strong>Pastors John and Leslie Siebeling</strong> ahead of your interview on <strong>Thursday, October&nbsp;8</strong>.</p>
+    <ul class="facts">
+      <li><b>13</b>interviews</li>
+      <li><b>18</b>voices</li>
+      <li><b>8</b>cities</li>
+      <li><b>4</b>continents</li>
+      <li><b>11</b>hours of film</li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <div class="wrap">
+      <p>Since July we have sat down with eighteen people who have walked some part of these thirty years with you, from Nairobi to Johannesburg. This brief is a map of what they told us. It follows the order the film tells the story, and for each person it shows what they talked about and where their story meets yours.</p>
+      <p>Use it to decide what you want to say on October 8: where you want to add your side of a story someone else has already told, and which parts of the story only the two of you can tell. Those come first, just below.</p>
+      <p>Almost everyone we interviewed closes by talking about the two of you. We have left those words out of this brief on purpose, so that you hear them first in their own voices.</p>
+    </div>
+  </section>
+
+  <section id="only-you">
+    <div class="wrap">
+      <h2>Only you can tell</h2>
+      <p class="section-lede">The parts of the story that no one else on film tells, or that someone tells only from their side. Tick the ones you want to cover. Your ticks stay on this device.</p>
+      <ul class="picks">
+        <li class="pick"><input type="checkbox" id="pick-nairobi"><label for="pick-nairobi"><span class="p-title">What Nairobi planted in you</span><span class="p-why">The years before the church, and the moment you knew you would leave.</span><span class="p-who">Don Matheny tells his side</span></label></li>
+        <li class="pick"><input type="checkbox" id="pick-memphis"><label for="pick-memphis"><span class="p-title">Why Memphis</span><span class="p-why">The call to Don, and choosing a city where you knew almost no one.</span><span class="p-who">Don Matheny, Rob Carter, and Pete and Kristi each tell part of it</span></label></li>
+        <li class="pick"><input type="checkbox" id="pick-first-years"><label for="pick-first-years"><span class="p-title">The first years</span><span class="p-why">Launch Sunday, the Sundays after it, and what kept you going.</span><span class="p-who">Pete and Kristi were there from launch Sunday; Rob came in the very early days</span></label></li>
+        <li class="pick"><input type="checkbox" id="pick-friends"><label for="pick-friends"><span class="p-title">The friends who stood with you early</span><span class="p-why">Pastor Dino Rizzo and the others who stood with you in the early years.</span><span class="p-who">No one on film tells this</span></label></li>
+        <li class="pick"><input type="checkbox" id="pick-fast"><label for="pick-fast"><span class="p-title">The 40-day fast and the billboard</span><span class="p-why">The breakthrough of 2000.</span><span class="p-who">No one on film mentions it</span></label></li>
+        <li class="pick"><input type="checkbox" id="pick-buildings"><label for="pick-buildings"><span class="p-title">The big steps of faith</span><span class="p-why">A grocery store on Germantown Parkway, a YMCA, Houston Levee, the auditorium, and now the Global Hub. Adam tells how each was built; why you took each step is yours to tell.</span><span class="p-who">Rob Carter and Adam Bartlett</span></label></li>
+        <li class="pick"><input type="checkbox" id="pick-katrina"><label for="pick-katrina"><span class="p-title">Katrina</span><span class="p-why">Why the church went to the Gulf Coast, and the people who came to the church through it.</span><span class="p-who">Dan Lord, Johnny Hill, and Parker VanBlaricom</span></label></li>
+        <li class="pick"><input type="checkbox" id="pick-next-gen"><label for="pick-next-gen"><span class="p-title">The next generation</span><span class="p-why">The prophecy about &ldquo;restless young men and women,&rdquo; and what you see in young people.</span><span class="p-who">Parker VanBlaricom mentions the prophecy; Dan and Parker tell the Axis story</span></label></li>
+        <li class="pick"><input type="checkbox" id="pick-zoe"><label for="pick-zoe"><span class="p-title">Zoe</span><span class="p-why">Leslie, the story of the women&rsquo;s conference. It comes up in two interviews, but no one tells it.</span><span class="p-who">Mentioned by Johnny Hill and the Geracis</span></label></li>
+        <li class="pick"><input type="checkbox" id="pick-broadcast"><label for="pick-broadcast"><span class="p-title">Television and the daily updates</span><span class="p-why">Ten years of the weekly TV program, and the spring of 2020, when the church moved online in a week and John hosted daily updates so everyone stayed connected and no one was left uncared for.</span><span class="p-who">Brian Pitre tells the production side</span></label></li>
+        <li class="pick"><input type="checkbox" id="pick-family"><label for="pick-family"><span class="p-title">Becoming a family of churches</span><span class="p-why">Why you said yes to Santiago, New York, Massachusetts, Florence, and Johannesburg, and what being their pastors means to you.</span><span class="p-who">Each couple tells their side</span></label></li>
+        <li class="pick"><input type="checkbox" id="pick-not-filmed"><label for="pick-not-filmed"><span class="p-title">Nashville, DC, and the prison locations</span><span class="p-why">Their pastors are being interviewed next. Why you started each one is yours to tell.</span><span class="p-who">Shaston and Kendall Hunter, Andreas and Jerrica Nunley, and Matt Anzivino</span></label></li>
+        <li class="pick"><input type="checkbox" id="pick-full-circle"><label for="pick-full-circle"><span class="p-title">Full circle, and what comes next</span><span class="p-why">Nairobi Lighthouse joining the family, the word about &ldquo;200 times over,&rdquo; and what you see for the next thirty years.</span><span class="p-who">Mundo Meneses, Adam Bartlett, and Adrian and Leigh Wright point toward it</span></label></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="story-so-far">
+    <div class="wrap">
+      <h2>The story so far</h2>
+      <p class="section-lede">Thirty years in order, and who tells each part on camera.</p>
+      <div class="legend"><span class="lg"><span class="chip film">On film</span> told well by others</span><span class="lg"><span class="chip partly">Your side</span> told by others; your view would complete it</span><span class="lg"><span class="chip yours">Only you</span> no one on film tells it</span></div>
+      <div class="timeline">
+        <div class="t-row"><span class="t-when">1976</span><span class="t-what">Pete, 10, meets John, 9, shooting fireworks the day after the Fourth of July.</span><span class="t-who">Pete and Kristi Sciacchetano</span><span class="chip film">On film</span></div>
+        <div class="t-row"><span class="t-when">Early 1990s</span><span class="t-what">John&rsquo;s trips to Nairobi, living with the Mathenys, and your years on staff at Nairobi Lighthouse.</span><span class="t-who">Don Matheny</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">1996</span><span class="t-what">Telling Don you were called to plant in America, the retreat, and the send-off at City Stadium.</span><span class="t-who">Don Matheny</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">Summer 1996</span><span class="t-what">&ldquo;We found the city.&rdquo; Why Memphis.</span><span class="t-who">Don Matheny, Rob Carter, Pete and Kristi</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">1996</span><span class="t-what">Seven people, small groups, and launch Sunday at the Home Builders Association on November 10.</span><span class="t-who">Pete and Kristi Sciacchetano</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">1996&ndash;2002</span><span class="t-what">Church in a box: chairs, TVs up backyard ramps, the nursery in the kitchen.</span><span class="t-who">Pete and Kristi, Rob Carter</span><span class="chip film">On film</span></div>
+        <div class="t-row"><span class="t-when">Early years</span><span class="t-what">Pastor Dino Rizzo, and the friends who stood with you.</span><span class="t-who">Not on film</span><span class="chip yours">Only you</span></div>
+        <div class="t-row"><span class="t-when">2000</span><span class="t-what">The 40-day fast and the billboard.</span><span class="t-who">Not on film</span><span class="chip yours">Only you</span></div>
+        <div class="t-row"><span class="t-when">2002</span><span class="t-what">Into the old Mega Market on Germantown Parkway, leased at first and bought around 2007.</span><span class="t-who">Rob Carter, Adam Bartlett</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">2004&ndash;2009</span><span class="t-what">Axis begins, Dan and Paige Lord join, and the first Axis Conference.</span><span class="t-who">Dan Lord, Parker VanBlaricom</span><span class="chip film">On film</span></div>
+        <div class="t-row"><span class="t-when">2005</span><span class="t-what">Katrina: the church&rsquo;s relief effort, and the people who came to the church through it.</span><span class="t-who">Dan Lord, Johnny Hill, Parker VanBlaricom</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">2008&ndash;2010</span><span class="t-what">The Collierville YMCA, the trade with Forest Hill Community Church, and Houston Levee opening in February 2010.</span><span class="t-who">Adam Bartlett</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">2008&ndash;2018</span><span class="t-what">The weekly TV program: John on Memphis television every weekend for ten years.</span><span class="t-who">Brian Pitre, to be filmed</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">2011</span><span class="t-what">The first Serve Truck, then Read to Lead and Super Saturdays.</span><span class="t-who">Mundo Meneses</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">2014</span><span class="t-what">Santiago, the first church outside the United States.</span><span class="t-who">Josh and Jessica Fuentes, Mundo Meneses</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">2016&ndash;2017</span><span class="t-what">The Houston Levee auditorium.</span><span class="t-who">Adam Bartlett, Dan Lord</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">Every year</span><span class="t-what">Zoe.</span><span class="t-who">Mentioned by Johnny Hill and the Geracis</span><span class="chip yours">Only you</span></div>
+        <div class="t-row"><span class="t-when">2017&ndash;2020</span><span class="t-what">Wayne and Classy: meeting at ARC, becoming their pastors, and the merger.</span><span class="t-who">Wayne and Classy Francis</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">March 2020</span><span class="t-what">COVID: in Santiago the weekend it shut down; in Memphis, one week from in-person to livestream, John&rsquo;s daily updates with guests on Zoom, and food lines; Easter online in New York.</span><span class="t-who">Wayne and Classy, Josh and Jessica, Mundo Meneses, Brian Pitre (to be filmed)</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">2020&ndash;2021</span><span class="t-what">Massachusetts: Emy&rsquo;s dream and the FaceTime.</span><span class="t-who">Emy Vazquez</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">2022</span><span class="t-what">Florence opens in the Limonaia.</span><span class="t-who">Marco and Tiina Geraci</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">2024</span><span class="t-what">Johannesburg&rsquo;s first Sunday as The Life Church, and the mandate that became the Bible School.</span><span class="t-who">Adrian and Leigh Wright</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">Today</span><span class="t-what">Nashville, Washington DC, and the prison locations.</span><span class="t-who">Interviews planned: Shaston and Kendall Hunter, Andreas and Jerrica Nunley, Matt Anzivino</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">2026</span><span class="t-what">Nairobi Lighthouse joins the family, the NextGen Global Hub breaks ground, and the Bible School finishes its first year.</span><span class="t-who">Mundo Meneses, Adam Bartlett, Adrian and Leigh Wright</span><span class="chip partly">Your side</span></div>
+        <div class="t-row"><span class="t-when">Next</span><span class="t-what">What you see for the next thirty years.</span><span class="t-who">Yours to say</span><span class="chip yours">Only you</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="movement" id="sent">
+    <div class="wrap">
+      <div class="movement-head">
+        <span class="numeral">I</span>
+        <h2>Sent</h2>
+        <span class="years">Nairobi &middot; 1993&ndash;1996</span>
+      </div>
+      <p>The church was born on a mission field. One voice carries these years, from the man who sent you.</p>
+
+      <article class="person" id="don-matheny">
+        <h3>Pastor Don Matheny</h3>
+        <p class="role">Nairobi Lighthouse Church, Kenya &middot; filmed in Nairobi, July 2026 &middot; 59 minutes</p>
+        <h4>What he talked about</h4>
+        <ul>
+          <li>Meeting John on a missions team from Baton Rouge, and John asking to stay behind after his second trip. John moved into the Mathenys&rsquo; home. Don remembers him saying, &ldquo;Pastor, I just want to come. And I want to serve.&rdquo;</li>
+          <li>Counseling John toward marrying Leslie, and the two of you coming back to serve on staff for about three and a half years.</li>
+          <li>What you built there: Breakthrough, the college-and-career ministry that is now City Lights; Leslie&rsquo;s work in Kids House and her calligraphy; John leading worship and teaching; the curriculum you both wrote.</li>
+          <li>The church&rsquo;s move from a hotel ballroom to a high school to City Stadium, around 3,000 people, and how naturally you moved across Kenya&rsquo;s forty-plus tribes.</li>
+          <li>The living-room conversation where you told him you were called to plant a church in America, not to spend your lives as missionaries.</li>
+          <li>The staff retreat with his own pastor, Jim Clark, and the commissioning at City Stadium: the church pledged monthly support and the crowd cheered &ldquo;like a ball game.&rdquo;</li>
+          <li>The call from Memphis in the summer of 1996, &ldquo;we found the city,&rdquo; the verse he still carries from it (Psalm 126:6), and his reflection that a church in Africa sent you to the city where Dr. King died.</li>
+          <li>Thirty years of staying close: visiting your first apartment and office, and serving as a presbyter to the church.</li>
+        </ul>
+        <h4>Where your story meets his</h4>
+        <ul class="meets">
+          <li>John, what made you ask to stay behind in Nairobi.</li>
+          <li>Telling your pastor, in his living room, that you were called to plant in America.</li>
+          <li>The retreat, and the day at City Stadium: what it felt like on that platform, not yet knowing where you were going.</li>
+          <li>Your side of the call from Memphis, and how you knew it was the city.</li>
+          <li>Living on Nairobi Lighthouse&rsquo;s support while you searched for the city and through the first years after launch.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="movement" id="planted">
+    <div class="wrap">
+      <div class="movement-head">
+        <span class="numeral">II</span>
+        <h2>Planted</h2>
+        <span class="years">Memphis &middot; 1996&ndash;2002</span>
+      </div>
+      <p>Seven people, a rented room, and six years of setting up and tearing down, until a derelict grocery store on Germantown Parkway.</p>
+
+      <article class="person" id="sciacchetano">
+        <h3>Pete and Kristi Sciacchetano</h3>
+        <p class="role">Friends since childhood, with the church from its first years &middot; filmed in Memphis, September 2026 &middot; 36 minutes</p>
+        <h4>What they talked about</h4>
+        <ul>
+          <li>Pete meeting John on July 5, 1976, the day after the Fourth, shooting fireworks in Louisiana. Pete was 10 and John was 9: &ldquo;friends ever since, 50 years later.&rdquo;</li>
+          <li>Kristi meeting Leslie in sixth or seventh grade, and John in eleventh; what the two of you were like as teenagers.</li>
+          <li>Leslie&rsquo;s letters from Kenya, which Kristi still has, a month each way for three years.</li>
+          <li>Your visit to Baton Rouge to tell them about Memphis, the seven people on the launch team, and starting with small groups.</li>
+          <li>Launch Sunday at the Home Builders Association. Pete remembers over 100 people and Kristi remembers 150 to 200. In the weeks after, Pete remembers attendance falling by half before it picked back up.</li>
+          <li>The car ride the summer after launch when John told Pete, &ldquo;we could really use you in Memphis,&rdquo; and Kristi&rsquo;s grandmother&rsquo;s verdict: &ldquo;Memphis, that&rsquo;s stupid.&rdquo;</li>
+          <li>Driving up from Baton Rouge for months until they moved &ldquo;two Marches later.&rdquo;</li>
+          <li>Church in a box: patterned carpet and gold chandeliers, the nursery in the kitchen, tube TVs hauled up ramps Pete and John built in your backyard, and a running disagreement with the building&rsquo;s owners over the lights.</li>
+          <li>John baptizing Pete, and later Kristi&rsquo;s sister, in their hot tub; dedicating their children and now their grandchildren; praying for Kristi&rsquo;s healing.</li>
+          <li>What it is like now to drive onto the Houston Levee campus, and the church&rsquo;s values, ten at the start and twelve now.</li>
+        </ul>
+        <h4>Where your story meets theirs</h4>
+        <ul class="meets">
+          <li>The reasons you gave them in Baton Rouge for choosing Memphis.</li>
+          <li>Starting with small groups, and the seven who made up the launch team.</li>
+          <li>Why you asked Pete to come, and why that summer.</li>
+          <li>Launch Sunday as you saw it from the front of the room.</li>
+          <li>The baptisms and dedications of those first years, many of them in people&rsquo;s homes.</li>
+        </ul>
+      </article>
+
+      <article class="person" id="rob-carter">
+        <h3>Rob Carter</h3>
+        <p class="role">Member since the Home Builders Association days &middot; filmed in Memphis, September 2026 &middot; 19 minutes</p>
+        <h4>What he talked about</h4>
+        <ul>
+          <li>Coming to Memphis with FedEx, where he spent 35 years, and visiting because his friend Steve Streitmatter told him he had to see what was happening. He was &ldquo;completely hooked right from the start.&rdquo;</li>
+          <li>John leading worship on his guitar at the Home Builders Association, and setting up chairs and moving conference tables every week for Kids Life.</li>
+          <li>A word Pastor Don spoke over Rob and John together during one of his visits.</li>
+          <li>Outgrowing the Home Builders room, searching around Cordova, and finding the old Mega Market on North Germantown Parkway: columns that already looked like a church, and &ldquo;coolers and just junk everywhere&rdquo; inside.</li>
+          <li>How the purchase came together through a Christian building owner, the banks, and early givers, and Rob teaching the church&rsquo;s tithing class.</li>
+          <li>Moving in: folding chairs to a full auditorium, a church that was visibly multicultural, and Kids Life taking off.</li>
+          <li>John&rsquo;s fearlessness on big decisions. When Rob said they were reaching too far, John answered, &ldquo;No, we&rsquo;re not. We&rsquo;re not reaching far enough.&rdquo;</li>
+          <li>Two people sent from Nairobi to plant a multicultural church in &ldquo;the buckle of the Bible Belt,&rdquo; and the church&rsquo;s reach today through the Ark ministry.</li>
+        </ul>
+        <h4>Where your story meets his</h4>
+        <ul class="meets">
+          <li>The moment you knew the Home Builders room was too small, and the decision to buy a gutted grocery store.</li>
+          <li>How the deal with the building&rsquo;s owner came together.</li>
+          <li>The word Pastor Don spoke over John and Rob.</li>
+          <li>A time someone told you that you were reaching too far.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="movement" id="multiplied">
+    <div class="wrap">
+      <div class="movement-head">
+        <span class="numeral">III</span>
+        <h2>Multiplied</h2>
+        <span class="years">The city and the next generation &middot; 2002&ndash;2017</span>
+      </div>
+      <p>Katrina sends the church out of the building. Axis grows from thirty students to a conference, the Serve Trucks roll out to the schools, the church spreads to new locations, and Santiago becomes the first church outside the United States.</p>
+
+      <article class="person" id="mundo-meneses">
+        <h3>Pastor Mundo Meneses</h3>
+        <p class="role">Outreach and missions, with the church for more than 20 years &middot; filmed in Memphis &middot; 60 minutes</p>
+        <h4>What he talked about</h4>
+        <ul>
+          <li>Your outreach before the church had a building, and before it launched: &ldquo;not only have church, but be the church.&rdquo; Community centers, bounce houses, and adopting blocks door to door.</li>
+          <li>Serving Memphis with &ldquo;what&rsquo;s in our hand,&rdquo; from food and school supplies to foster care and literacy.</li>
+          <li>Read to Lead, the after-school reading and leadership program that starts in third grade and grew out of the red bags taken to schools. Two girls who started in third grade are now in college, and one works in the program.</li>
+          <li>Super Saturday on the second Saturday of every month, with pop-up grocery stores in the city&rsquo;s food deserts.</li>
+          <li>COVID: daily drive-through food lines, praying with families at their cars, and the food bank asking the church to train other sites. &ldquo;When things get dark, the church shines.&rdquo;</li>
+          <li>The Serve Trucks: John&rsquo;s conversation with Pastor Matthew Barnett, the Sunday you stood up and said you were buying the first truck, $75,000 given that weekend, and deliveries to 10 to 12 schools beginning in 2011.</li>
+          <li>How the other locations adapt the playbook, from Breakfast with Friends in New York to pop-ups in DC&rsquo;s community centers.</li>
+          <li>The word you received after Nairobi, that God would replace you &ldquo;200 times over on the mission field,&rdquo; and teams sent to every continent except Antarctica: Peru, Uganda, Zimbabwe, Cambodia, Papua New Guinea, Togo, Haiti, Kenya, and more.</li>
+          <li>Meeting Josh and Jessica Fuentes on a trip to Santiago, and John&rsquo;s vision of &ldquo;a bridge between the different countries.&rdquo;</li>
+          <li>Nairobi Lighthouse Church, the church that sent you to Memphis, becoming part of The Life Church family: &ldquo;a full circle moment.&rdquo;</li>
+        </ul>
+        <h4>Where your story meets his</h4>
+        <ul class="meets">
+          <li>The Sunday you announced the first Serve Truck.</li>
+          <li>&ldquo;200 times over&rdquo;: what that word meant when you heard it, and what it means now.</li>
+          <li>The bridge between countries.</li>
+          <li>Nairobi Lighthouse joining the family.</li>
+        </ul>
+      </article>
+
+      <article class="person" id="dan-lord">
+        <h3>Pastor Dan Lord</h3>
+        <p class="role">On staff 2005&ndash;2018, built Axis and the Axis Conference, now pastoring in St. Louis &middot; filmed in St. Louis, August 2026 &middot; 50 minutes</p>
+        <h4>What he talked about</h4>
+        <ul>
+          <li>Meeting you at a conference in 2004, a weekend visit to Cordova, lunch at Huey&rsquo;s, and coming back for the Reinhard Bonnke event.</li>
+          <li>John&rsquo;s idea that they move to Memphis and help instead of planting a church. They moved with nine-month-old Tate and no job description.</li>
+          <li>His first assignments: the nursery, which he asked for as your biggest headache, and then leading Katrina relief for Louisiana and the Gulf Coast. He remembers John saying, &ldquo;if you&rsquo;re a leader, you&rsquo;ll figure it out.&rdquo;</li>
+          <li>Axis at 30 to 40 students in a church of &ldquo;six or 700 people,&rdquo; and getting the whole church behind its young people.</li>
+          <li>Trading a pool camp for camp plus a serve day, and talking skeptical teenagers into it, a young Parker VanBlaricom among them.</li>
+          <li>The first Axis Conference, which he works out on camera was 2009, with two or three hundred students and no budget.</li>
+          <li>Kids crowded onto borrowed bleachers at Cordova, John telling him &ldquo;Dan, I don&rsquo;t think this is safe,&rdquo; and the move into the Houston Levee auditorium.</li>
+          <li>Next-gen culture alongside John&rsquo;s &ldquo;next gen revolution&rdquo; preaching: Tribes, My Ten, the You Rock award (a rock from a ditch and a Sharpie), and the &ldquo;I&rsquo;m a leader&rdquo; chant.</li>
+          <li>&ldquo;Next man up&rdquo;: building a team that does not depend on any one person.</li>
+        </ul>
+        <h4>Where your story meets his</h4>
+        <ul class="meets">
+          <li>What you saw in Dan and Paige that made you ask them to move after one weekend.</li>
+          <li>Handing a brand-new arrival the church&rsquo;s Katrina relief.</li>
+          <li>The decision to build at Houston Levee.</li>
+          <li>What John hoped the &ldquo;next gen revolution&rdquo; preaching would change in the adults.</li>
+        </ul>
+      </article>
+
+      <article class="person" id="johnny-hill">
+        <h3>Pastor Johnny Hill</h3>
+        <p class="role">Worship, with the church since Hurricane Katrina &middot; filmed in Memphis, September 2026 &middot; 26 minutes</p>
+        <h4>What he talked about</h4>
+        <ul>
+          <li>Evacuating New Orleans for Katrina in 2005, enrolling at the University of Memphis, and hearing John on the radio about the church&rsquo;s relief project. He came to a special service that night.</li>
+          <li>Chili&rsquo;s after church, then Open Mic Night, and joining the worship team within weeks. The first song he heard the church sing was &ldquo;Friend of God,&rdquo; which he had played on repeat through the storm.</li>
+          <li>Singing background vocals, then leading songs, Kids Life, and Axis; now overseeing worship in Memphis and across the locations. &ldquo;It&rsquo;s all one church.&rdquo;</li>
+          <li>John&rsquo;s teaching that worship is for &ldquo;participators, not spectators,&rdquo; and how the two of you still go over the service flow every week.</li>
+          <li>Sound of Christmas, the Axis Conference, Zoe, and the January revival nights: &ldquo;We create space for God to create moments.&rdquo;</li>
+          <li>Writing songs that serve the church first, and Make Room, the church&rsquo;s ministry to other pastors.</li>
+          <li>Being given room to dream big and take risks.</li>
+        </ul>
+        <h4>Where your story meets his</h4>
+        <ul class="meets">
+          <li>The radio appeal and the special service after Katrina: what the church did in those weeks, and why.</li>
+          <li>Where your conviction about worship as participation came from.</li>
+          <li>Why you built Make Room.</li>
+        </ul>
+      </article>
+
+      <article class="person" id="parker-vanblaricom">
+        <h3>Pastor Parker VanBlaricom</h3>
+        <p class="role">Next Gen and the Axis Conference, in the church since he was eight &middot; filmed in Memphis, September 2026 &middot; 52 minutes</p>
+        <h4>What he talked about</h4>
+        <ul>
+          <li>His family finding the church in the Yellow Pages and coming for the first time in August 2000, when he was eight. John led worship, preached, and gave an altar call; his dad went forward, and on the drive home they said, &ldquo;this is where we need to be.&rdquo;</li>
+          <li>Axis starting in 2004 for seventh through twelfth grade, and joining it in 2005 as a seventh grader, when 20 to 30 students came on a Wednesday night.</li>
+          <li>His first mission trip, to the Los Angeles Dream Center in 2005, and praying out loud for someone for the first time: a homeless man in a park.</li>
+          <li>Meeting Pastor Dan Lord on a Katrina relief trip to the Mississippi coast, and growing up in Axis: a homeschool year, a &ldquo;fake desk&rdquo; in the youth pastor&rsquo;s office, and Dan talking him into college.</li>
+          <li>Becoming a full-time youth pastor at Germantown Parkway in 2014, and in 2018, after the move into the Houston Levee auditorium, Dan handing him Axis over coffee at Starbucks: &ldquo;Here&rsquo;s the keys. And good luck.&rdquo;</li>
+          <li>The first Axis Conference in 2009: a countdown shirt he wore every Wednesday for six months, about 200 to 250 students, and Matthew Barnett preaching. His friend Hunter was saved there.</li>
+          <li>The conference since: about 1,200 students in 2018 and 1,500 in 2019, cancelled in 2020, then over 2,000 and sold out by 2022, with more than 500 volunteers and a year of preparation each time.</li>
+          <li>Serve Day, which now sends about 2,000 teenagers into the city; the conference openers; and tribes, started in 2015 when Axis at Germantown Parkway had 300 to 400 students and two staff.</li>
+          <li>John&rsquo;s conviction that young people &ldquo;aren&rsquo;t in the background of our church, they&rsquo;re the backbone of our church,&rdquo; and a prophecy John has often spoken of, that God would send the church &ldquo;restless young men and women.&rdquo;</li>
+          <li>Handing Axis and Next Gen to his brother Zach and sister-in-law Anna.</li>
+        </ul>
+        <h4>Where your story meets his</h4>
+        <ul class="meets">
+          <li>The VanBlaricoms&rsquo; first Sunday in August 2000, and that altar call.</li>
+          <li>The prophecy about restless young men and women: when you received it and how it shaped the church.</li>
+          <li>Saying yes to the first Axis Conference in 2009.</li>
+          <li>Trusting the next generation to lead: Dan, then Parker, and now Zach and Anna.</li>
+        </ul>
+      </article>
+
+      <article class="person" id="adam-bartlett">
+        <h3>Pastor Adam Bartlett</h3>
+        <p class="role">The church&rsquo;s building projects, on staff since 2008 &middot; filmed in Memphis, September 2026 &middot; 52 minutes</p>
+        <h4>What he talked about</h4>
+        <ul>
+          <li>Moving to Memphis from Auburn, Alabama in 2007, finding the church online, and his first Sunday on June 10, 2007. Teenage mission trips to Mexico, building one-room houses in three and a half days, started his love of construction.</li>
+          <li>Interning that fall, when the church had just bought the Germantown Parkway property and was managing the whole shopping center, and joining the staff in April 2008.</li>
+          <li>His first project from John, an expansion of Germantown Parkway that was never built. John prayed, called a pastor friend, and came away saying, &ldquo;I know for a fact that we need to get out of this location.&rdquo;</li>
+          <li>Years of renovations at Germantown Parkway (from about 650 seats to about 1,000) and how emotional it was to sell it.</li>
+          <li>Your push for new locations, starting at the Collierville YMCA: a rented truck every Saturday, church in the gym, kids in the racquetball courts, baptisms in the pool, and Adam as location pastor for about a year.</li>
+          <li>The conversation with Forest Hill Community Church that he calls a miracle. They took the YMCA site and the church took Houston Levee, bought in 2009 and opened in February 2010 with 600 to 700 people.</li>
+          <li>Highland, the former Victory University building, which opened in September 2014, and the 2019 merger at Austin Peay that became an outreach and Dream Center hub.</li>
+          <li>Houston Levee becoming the one hub: the 2,000-seat auditorium you talked about for a decade, 52,000 square feet started in 2016, dedicated with Chris Hodges. &ldquo;This auditorium is a dream come true, but it&rsquo;s not the dream.&rdquo;</li>
+          <li>Building far from home: a former CVS in Mamaroneck, New York, rezoned over Zoom in 2020, and a nearly finished building in Fitchburg that let Massachusetts leave its portable site in Leominster.</li>
+          <li>The NextGen Global Hub: 50,000 square feet on three floors, ground broken in August 2026, finishing around September 2027.</li>
+        </ul>
+        <h4>Where your story meets his</h4>
+        <ul class="meets">
+          <li>The prayer and the phone call that turned an expansion plan into a decision to leave Germantown Parkway.</li>
+          <li>Your first conversation with Forest Hill Community Church.</li>
+          <li>Ten years of dreaming about a 2,000-seat room before ground was broken.</li>
+          <li>Your vision for Houston Levee as a hub for every location.</li>
+        </ul>
+      </article>
+
+      <article class="person" id="fuentes">
+        <h3>Pastors Josh and Jessica Fuentes</h3>
+        <p class="role">The Life Church Santiago, Chile &middot; filmed in Santiago, August 2026 &middot; 57 minutes, partly in Spanish</p>
+        <h4>What they talked about</h4>
+        <ul>
+          <li>Josh moving back to Chile with a call to plant a church, and Pastor Robert Barriger&rsquo;s mentoring at Camino de Vida; Jessica&rsquo;s years on the Camino de Vida team in Lima.</li>
+          <li>Meeting at a conference in Santiago: &ldquo;amor a primera vista&rdquo; (love at first sight).</li>
+          <li>The call from Pastor Robert that John &ldquo;had felt something for Chile&rdquo; and wanted to plant with them, Jessica&rsquo;s own yes, and moving their honeymoon from Europe to Memphis.</li>
+          <li>Their first weekend in Memphis and a dinner around a big table, where they felt like family before anything was decided.</li>
+          <li>Launch day, May 25, 2014, which turned out to be John&rsquo;s birthday: a team of 13 and about 200 people.</li>
+          <li>Twelve years portable: the first venue, eight years in midtown, two years closed in the pandemic, then a winter storm that blacked out the city.</li>
+          <li>The Ritz-Carlton: the walk-through with John that March, &ldquo;why not the Ritz? The worst thing that they can say is no,&rdquo; 21 days of fasting and prayer, and a permanent Sunday home.</li>
+          <li>A church of many nations (Peru, Brazil, Colombia, Venezuela, the Philippines, Nigeria, the United States, Chile) and the volunteers who arrive at 6:45 every Sunday.</li>
+          <li>Chicureo: three &ldquo;Life Church experiences&rdquo; of about 200 people each, a second location in 2027, and the new name, The Life Church Chile.</li>
+        </ul>
+        <h4>Where your story meets theirs</h4>
+        <ul class="meets">
+          <li>What drew you to Chile, and your conversation with Pastor Robert.</li>
+          <li>That first weekend: what you noticed about them.</li>
+          <li>Walking through the Ritz that March, before anyone knew it would become home.</li>
+          <li>Being in Chile the weekend COVID hit, already talking about a second location.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="movement" id="family">
+    <div class="wrap">
+      <div class="movement-head">
+        <span class="numeral">IV</span>
+        <h2>Family</h2>
+        <span class="years">Pastors to pastors &middot; 2017&ndash;2021</span>
+      </div>
+      <p>Two couples who led their own churches asked you to be their pastors before anything was merged. Then COVID.</p>
+
+      <article class="person" id="francis">
+        <h3>Pastors Wayne and Classy Francis</h3>
+        <p class="role">The Life Church New York &middot; filmed in Westchester, August 2026 &middot; 54 minutes</p>
+        <h4>What they talked about</h4>
+        <ul>
+          <li>Planting Authentic Church in Westchester in 2009, meeting weekly from 2010, for a church as diverse as New York. Eighty-five people came the first Sunday and nineteen the next.</li>
+          <li>The portable years: a U-Haul and a Mini Cooper, about seven young volunteers, and Ultimate Frisbee and pizza nights that brought people in.</li>
+          <li>What planting cost them: outside jobs, no health insurance, a sick daughter, and nights they nearly quit.</li>
+          <li>Meeting you at ARC in 2017, when you walked over to them at lunch on the grass, and Wayne speaking at Serve Day soon after.</li>
+          <li>Asking you to be their pastors. John said he would pray about it, then said yes.</li>
+          <li>A walk in Manhattan pitching <i>Black Fist White Knuckles</i>, and dinner at Houston&rsquo;s where John suggested Santiago as the model for joining together.</li>
+          <li>The playgroup theater years (about 400 people, no parking, a difficult landlord) and John&rsquo;s line on his first visit: &ldquo;this space is your limitation.&rdquo;</li>
+          <li>Announcing the merger in January 2020, buying a building in February, and Wayne being in Santiago with John and Mundo when COVID shut the world down in March, with New Rochelle as &ldquo;ground zero.&rdquo;</li>
+          <li>Launching online on Easter 2020 to &ldquo;an invisible audience.&rdquo;</li>
+          <li><i>Black Fist White Knuckles</i>, filmed in New York and Memphis, then the book and the Leadership in Black and White podcast.</li>
+          <li>The former CVS: prayer-walked for years, never listed, and Leslie seeing the finished space when Wayne couldn&rsquo;t.</li>
+          <li>Night to Shine as the building&rsquo;s first event; growth from about 500 to around 2,000 across the services; 5,000 over nine services this Easter; a second location ahead.</li>
+        </ul>
+        <h4>Where your story meets theirs</h4>
+        <ul class="meets">
+          <li>What made you walk over to them at ARC.</li>
+          <li>Saying yes to being their pastors, and why you offered Santiago as the model.</li>
+          <li>Leslie, what you saw in that gutted CVS.</li>
+          <li>Being in Santiago together the weekend everything shut down.</li>
+        </ul>
+      </article>
+
+      <article class="person" id="vazquez">
+        <h3>Pastor Emy Vazquez</h3>
+        <p class="role">The Life Church Massachusetts &middot; filmed in Fitchburg, August 2026 &middot; 56 minutes</p>
+        <h4>What he talked about</h4>
+        <ul>
+          <li>His testimony (coming to faith in prison, with a past rooted in Fitchburg) and planting first in Lancaster and Leominster, through eight or nine venues.</li>
+          <li>Meeting John years earlier on an ARC panel and trading numbers they did not use for five years.</li>
+          <li>A recurring dream about &ldquo;partnership,&rdquo; seeing Wayne&rsquo;s post about The Life Church, calling Wayne, and then calling John.</li>
+          <li>The FaceTime with both of you during the lockdown, which he describes as a &ldquo;Cornelius&rdquo; moment, and becoming The Life Church Massachusetts.</li>
+          <li>Buying the Main Street building debt-free; an eviction notice in October 2024; and a $2.5 million building in place of a $6 million project. They moved in in February 2025 and grew about 60%.</li>
+          <li>An aggressive cancer diagnosis in the same season, which he kept private (&ldquo;the worst of times and the best of times&rdquo;). He is now cancer-free.</li>
+          <li>Launching Axis Student Ministry with six to eight students and growing to 185.</li>
+          <li>Oversight without micromanaging, the small check-ins that go both ways, and offering to relocate when one of the locations faced a challenge.</li>
+          <li>The hardest personal season of his life, his divorce, and how you and Pastor Mundo walked him through it.</li>
+          <li>&ldquo;Thirty locations in thirty years,&rdquo; and a Bible college.</li>
+        </ul>
+        <h4>Where your story meets his</h4>
+        <ul class="meets">
+          <li>What you sensed about Massachusetts before Emy ever called.</li>
+          <li>The FaceTime during the lockdown.</li>
+          <li>How you have walked with pastors through their hardest seasons.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="movement" id="started">
+    <div class="wrap">
+      <div class="movement-head">
+        <span class="numeral">V</span>
+        <h2>Just Getting Started</h2>
+        <span class="years">2020&ndash;2027</span>
+      </div>
+      <p>The founding story, happening again: a lemon house in Florence, a first Sunday in Johannesburg, a school and a building still being built, and the church that sent you, now joining the family.</p>
+
+      <article class="person" id="geraci">
+        <h3>Pastors Marco and Tiina Geraci</h3>
+        <p class="role">The Life Church Italia, Florence &middot; filmed in Florence, September 2026 &middot; 58 minutes</p>
+        <h4>What they talked about</h4>
+        <ul>
+          <li>Meeting at a church Christmas party in London (they both worked for Starbucks) and serving in a large London church.</li>
+          <li>The call to Florence, and stepping off the train: &ldquo;we&rsquo;ve come home.&rdquo;</li>
+          <li>Being introduced to you through Will Johnson and Pastor Mundo, John inviting Marco to Axis during the lockdown, Marco quarantining 14 days in Mexico to get there, and meeting you in the green room.</li>
+          <li>A first launch that COVID stopped, and the months of getting to know you before they could start again.</li>
+          <li>Pastoring in a Catholic country: religion versus relationship, and people who do not believe God could use them.</li>
+          <li>The first service in January 2022 in the Limonaia: no heat, mopping ice off the floor, 90 people, and seven salvations.</li>
+          <li>Baptizing the first twenty, passing 100 (126 people, with Pastor Mundo there), and moving to the Space Cinema with equipment shipped from New York.</li>
+          <li>The English-speaking service John suggested, launched in October 2024, with 226 people across two services the first Sunday. They count 2,076 salvations so far.</li>
+          <li>Seventy to ninety volunteers a week, about forty leaders in development, and believing for a permanent home.</li>
+          <li>Make Room Europe, and Zoe, with a dream of Zoe Europe.</li>
+          <li>A conversation with John about building &ldquo;a church in Europe for the kids of our kids.&rdquo;</li>
+        </ul>
+        <h4>Where your story meets theirs</h4>
+        <ul class="meets">
+          <li>Meeting Marco in the green room in the middle of the lockdown.</li>
+          <li>The waiting season before Florence could open.</li>
+          <li>Why you suggested the English service.</li>
+          <li>&ldquo;A church in Europe for the kids of our kids&rdquo;: when you said it, and what you pictured.</li>
+        </ul>
+      </article>
+
+      <article class="person" id="wright">
+        <h3>Pastors Adrian and Leigh Wright</h3>
+        <p class="role">The Life Church South Africa, Johannesburg &middot; filmed in Johannesburg, September 2026 &middot; 89 minutes</p>
+        <h4>What they talked about</h4>
+        <ul>
+          <li>How they met: a pre-roll video as Adrian&rsquo;s excuse for a lunch, and a 108-year-old copy of <i>Paradise Lost</i>. They married about eighteen months later.</li>
+          <li>Johannesburg as the gateway to Africa: more than ten million people, a melting pot in a country with eleven official languages.</li>
+          <li>Planting their church in 2015 with sixteen people and about 1,000 rand; a visiting missionary who told Adrian, when they were around 300, that he was &ldquo;tempted to settle&rdquo;; and three years of praying for &ldquo;a wide open door.&rdquo;</li>
+          <li>Meeting Marco Geraci in Florence on a mentoring trip to Italy, and learning that his new church was The Life Church.</li>
+          <li>Meeting you in Memphis, the Vision Partners dinner, and John raising a partnership in Africa in an airport passageway without quite asking.</li>
+          <li>Telling Pastor Mundo and Nate on a call in early January, &ldquo;I don&rsquo;t think it&rsquo;s us&rdquo;; a year of staying in touch; Mundo&rsquo;s visit that September; the lead pastors&rsquo; retreat at Rosemary Beach in November, with five couples praying back home; and Adrian&rsquo;s first question after saying yes: &ldquo;how quickly can we do this?&rdquo;</li>
+          <li>Leigh&rsquo;s sense that it &ldquo;felt like home,&rdquo; the announcement in January, and their first Sunday as The Life Church South Africa on March 3, 2024. They have grown about 30% a year since.</li>
+          <li>A staff member who came to Adrian in tears after launch Sunday: &ldquo;if you&rsquo;re building an army, I want to be in it.&rdquo;</li>
+          <li>The Life Leadership Bible School: a course Adrian wrote at sixteen, the meeting in Nashville in June 2024 where John gave him one line of a ten-point mandate, and a first year of 400 students in 11 countries, taught by leaders from across the church family.</li>
+          <li>A family of churches across countries with no competition, only celebration.</li>
+          <li>What is next: about 45 acres of land for an &ldquo;intercontinental hub,&rdquo; at least ten churches in Africa, and a community center, literacy program and baby home in a nearby township.</li>
+        </ul>
+        <h4>Where your story meets theirs</h4>
+        <ul class="meets">
+          <li>Your first conversation with them in Memphis, and bringing up Africa in that passageway.</li>
+          <li>Inviting them to the lead pastors&rsquo; retreat at Rosemary Beach, where they decided.</li>
+          <li>The word, the day after their announcement, that Johannesburg would be key.</li>
+          <li>The ten-point mandate you gave in Nashville, and why a Bible school.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="confirm">
+    <div class="wrap">
+      <h2>Dates we&rsquo;d love you to confirm</h2>
+      <p class="section-lede">Places where the interviews disagree, or where no one was sure. These are for the captions on screen.</p>
+      <ul class="confirm-list">
+        <li>When John first went to Nairobi, when you married, and how long you served on staff. Don says about three and a half years.</li>
+        <li>How many came on launch Sunday, November 10, 1996. Pete remembers over 100; Kristi remembers 150 to 200.</li>
+        <li>When the Collierville YMCA location began and ended.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="end">
+    <div class="wrap">
+      <p>Prepared by the 30th Anniversary production team, September 2026. Quotes are taken word for word from the interview transcripts. The film&rsquo;s structure is a working draft and will change in the edit.</p>
+    </div>
+  </footer>
+</main>
+
+<script>
+(function () {
+  var KEY = "thirty-years-brief-picks";
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { saved = {}; }
+  document.querySelectorAll(".pick input[type=checkbox]").forEach(function (cb) {
+    if (saved[cb.id]) cb.checked = true;
+    cb.addEventListener("change", function () {
+      saved[cb.id] = cb.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+    });
+  });
+})();
+</script>
+</body>
+</html>
